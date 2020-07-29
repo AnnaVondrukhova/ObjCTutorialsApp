@@ -14,6 +14,12 @@
 		C1F79D1F24CDB5770022E012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C1F79D1E24CDB5770022E012 /* Assets.xcassets */; };
 		C1F79D2224CDB5770022E012 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C1F79D2024CDB5770022E012 /* LaunchScreen.storyboard */; };
 		C1F79D2524CDB5770022E012 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F79D2424CDB5770022E012 /* main.m */; };
+		C1F79D2E24CDB7EB0022E012 /* HTTPService.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F79D2D24CDB7EB0022E012 /* HTTPService.m */; };
+		C1F79D3224CF0BF30022E012 /* VideoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F79D3124CF0BF30022E012 /* VideoCell.m */; };
+		C1F79D3724CF14370022E012 /* Video.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F79D3624CF14370022E012 /* Video.m */; };
+		C1F79D3A24D00AB80022E012 /* VideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C1F79D3924D00AB80022E012 /* VideoViewController.m */; };
+		C1F79D3C24D0633F0022E012 /* css.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1F79D3B24D0633F0022E012 /* css.txt */; };
+		C1F79D3F24D06B210022E012 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1F79D3E24D06B210022E012 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +35,16 @@
 		C1F79D2124CDB5770022E012 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C1F79D2324CDB5770022E012 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C1F79D2424CDB5770022E012 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C1F79D2C24CDB7EB0022E012 /* HTTPService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HTTPService.h; sourceTree = "<group>"; };
+		C1F79D2D24CDB7EB0022E012 /* HTTPService.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HTTPService.m; sourceTree = "<group>"; };
+		C1F79D3024CF0BF30022E012 /* VideoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoCell.h; sourceTree = "<group>"; };
+		C1F79D3124CF0BF30022E012 /* VideoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoCell.m; sourceTree = "<group>"; };
+		C1F79D3524CF14370022E012 /* Video.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		C1F79D3624CF14370022E012 /* Video.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Video.m; sourceTree = "<group>"; };
+		C1F79D3824D00AB80022E012 /* VideoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoViewController.h; sourceTree = "<group>"; };
+		C1F79D3924D00AB80022E012 /* VideoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoViewController.m; sourceTree = "<group>"; };
+		C1F79D3B24D0633F0022E012 /* css.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = css.txt; path = TestServer/css.txt; sourceTree = SOURCE_ROOT; };
+		C1F79D3E24D06B210022E012 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1F79D3F24D06B210022E012 /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +64,7 @@
 			children = (
 				C1F79D1124CDB5680022E012 /* ObjCTutorialsApp */,
 				C1F79D1024CDB5680022E012 /* Products */,
+				C1F79D3D24D06B1F0022E012 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -61,19 +79,68 @@
 		C1F79D1124CDB5680022E012 /* ObjCTutorialsApp */ = {
 			isa = PBXGroup;
 			children = (
-				C1F79D1224CDB5680022E012 /* AppDelegate.h */,
-				C1F79D1324CDB5680022E012 /* AppDelegate.m */,
-				C1F79D1524CDB5680022E012 /* SceneDelegate.h */,
-				C1F79D1624CDB5680022E012 /* SceneDelegate.m */,
-				C1F79D1824CDB5680022E012 /* ViewController.h */,
-				C1F79D1924CDB5680022E012 /* ViewController.m */,
-				C1F79D1B24CDB5680022E012 /* Main.storyboard */,
+				C1F79D2B24CDB7C90022E012 /* Services */,
+				C1F79D3424CF141A0022E012 /* Model */,
+				C1F79D2F24CF0BB20022E012 /* View */,
+				C1F79D3324CF13410022E012 /* Controller */,
 				C1F79D1E24CDB5770022E012 /* Assets.xcassets */,
 				C1F79D2024CDB5770022E012 /* LaunchScreen.storyboard */,
 				C1F79D2324CDB5770022E012 /* Info.plist */,
 				C1F79D2424CDB5770022E012 /* main.m */,
 			);
 			path = ObjCTutorialsApp;
+			sourceTree = "<group>";
+		};
+		C1F79D2B24CDB7C90022E012 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C1F79D2C24CDB7EB0022E012 /* HTTPService.h */,
+				C1F79D2D24CDB7EB0022E012 /* HTTPService.m */,
+				C1F79D1224CDB5680022E012 /* AppDelegate.h */,
+				C1F79D1324CDB5680022E012 /* AppDelegate.m */,
+				C1F79D1524CDB5680022E012 /* SceneDelegate.h */,
+				C1F79D1624CDB5680022E012 /* SceneDelegate.m */,
+				C1F79D3B24D0633F0022E012 /* css.txt */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		C1F79D2F24CF0BB20022E012 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C1F79D1B24CDB5680022E012 /* Main.storyboard */,
+				C1F79D3024CF0BF30022E012 /* VideoCell.h */,
+				C1F79D3124CF0BF30022E012 /* VideoCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C1F79D3324CF13410022E012 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C1F79D1824CDB5680022E012 /* ViewController.h */,
+				C1F79D1924CDB5680022E012 /* ViewController.m */,
+				C1F79D3824D00AB80022E012 /* VideoViewController.h */,
+				C1F79D3924D00AB80022E012 /* VideoViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C1F79D3424CF141A0022E012 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C1F79D3524CF14370022E012 /* Video.h */,
+				C1F79D3624CF14370022E012 /* Video.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C1F79D3D24D06B1F0022E012 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C1F79D3E24D06B210022E012 /* WebKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,6 +202,7 @@
 			files = (
 				C1F79D2224CDB5770022E012 /* LaunchScreen.storyboard in Resources */,
 				C1F79D1F24CDB5770022E012 /* Assets.xcassets in Resources */,
+				C1F79D3C24D0633F0022E012 /* css.txt in Resources */,
 				C1F79D1D24CDB5680022E012 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -147,9 +215,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C1F79D1A24CDB5680022E012 /* ViewController.m in Sources */,
+				C1F79D3224CF0BF30022E012 /* VideoCell.m in Sources */,
+				C1F79D2E24CDB7EB0022E012 /* HTTPService.m in Sources */,
 				C1F79D1424CDB5680022E012 /* AppDelegate.m in Sources */,
 				C1F79D2524CDB5770022E012 /* main.m in Sources */,
 				C1F79D1724CDB5680022E012 /* SceneDelegate.m in Sources */,
+				C1F79D3A24D00AB80022E012 /* VideoViewController.m in Sources */,
+				C1F79D3724CF14370022E012 /* Video.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
